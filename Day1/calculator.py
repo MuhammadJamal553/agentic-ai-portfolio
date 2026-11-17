@@ -46,3 +46,23 @@ class Tool:
         """
         return self.func(*args, **kwargs)
 
+def calculator(a: int, b: int) -> int:
+    """Multiply two integers."""
+    return a * b
+
+
+calculator_tool = Tool(
+    name="calculator",
+    description="Multiply two integers.",
+    func=calculator,
+    arguments=[("a", "int"), ("b", "int")],
+    outputs="int",
+)
+
+
+if __name__ == "__main__":
+    print("LLM Tool Description:")
+    print(calculator_tool.to_string())
+
+    print("\nTool Execution Result:")
+    print(f"6 * 7 = {calculator_tool(6, 7)}")
