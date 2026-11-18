@@ -6,3 +6,18 @@
 - Added retry resilience to gracefully handle temporary `503` API demand spikes.
 
 ## How to Run
+
+1. **Install dependencies:**
+   ```bash
+   pip install google-genai python-dotenv requests pydantic
+   ```
+
+2. **Set your API key** in the root `.env` file:
+   ```env
+   GEMINI_API_KEY=your_google_ai_studio_key_here
+   ```
+
+3. **Run the agent:**
+   ```bash
+   python Day3/live_structured_agent.py
+   ```
